@@ -1,0 +1,7 @@
+name: TEK5020-p2
+
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12

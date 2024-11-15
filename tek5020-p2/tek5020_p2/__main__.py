@@ -10,6 +10,7 @@ from tek5020_p1.classifiers import (
     NearestNeighborClassifier,
 )
 from tek5020_p2 import draw_regions
+import os
 
 
 def load_image(path):
@@ -101,10 +102,12 @@ def visualize_segmentation(segmented, n_classes):
 
 
 if __name__ == "__main__":
-    train_image_path = r"tek5020-p2\tests\data\Bilde2.png"
-    test_image_path = r"tek5020-p2\tests\data\Bilde3.png"
+    dir = os.path.dirname(__file__)
+    data = os.path.join(dir, "..", "tests", "data")
+    train_image_path = os.path.join(data, "Bilde2.png")
+    test_image_path = os.path.join(data, "Bilde3.png")
 
-    size = 350
+    size = 200
     r1 = (950, 1200)
     r2 = (2500, 800)
     r3 = (400, 400)
